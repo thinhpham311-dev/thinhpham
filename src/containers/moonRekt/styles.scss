@@ -1,0 +1,362 @@
+@use "../../scss/" as *;
+
+.imageMoon_rektWrapper {
+    background-color: rgba(0, 0, 0, 0);
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    min-height: 1610px;
+    max-width: 100%;
+    overflow: hidden;
+    @include tablet{
+        min-height: 100%;
+    }
+
+    .imageMoon_rektBg {
+        width: 100%;
+        height: auto;
+        @include mobile{
+            display: none;
+        }
+
+        @include tablet{
+            img{
+
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+
+
+    .imageMoon_rektContainer {
+        box-sizing: border-box;
+        padding-top: 160px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include mobile {
+            left: unset;
+            top: unset;
+            transform: unset;
+            position: relative;
+            padding: 146px 0 !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 0% 0%, 0% 572px, 0px 957px;
+            background-image: url('./../../../public/img/bg-color-mb.png'), url('./../../../public/img/bg-color-mb.png'), url('./../../../public/img/bg-color-mb.png');
+        }
+
+        .imageMoon_rektInner {
+            position: relative;
+            flex: 0 0 67%;
+            max-width: 67%;
+            margin: 0px auto;
+            min-height: 925px;
+
+
+
+            @include mobile{
+                img{
+                    margin: 200px 0;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            @include tablet {
+
+                min-height: 100%;
+                img{
+                    margin:  0;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+
+            .imageMoon_rektContent {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+
+                @include mobile {
+                    position: static;
+                }
+
+                .imageMoon_rektContentItem {
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: rgb(20, 28, 41) !important;
+                    position: absolute;
+                    max-width: 280px;
+                    width: 100%;
+
+                    @include tablet{
+                        max-width: 220px;
+                    }
+
+                    p{
+                        margin-bottom: 0;
+                    }
+
+                    @include mobile {
+                        position: relative;
+                        left: unset;
+                        bottom: unset;
+                        transform: unset;
+                        max-width: 100%;
+                        text-align: start;
+                        padding-bottom: 24px;
+                    }
+
+                    &:first-child {
+                        top: 231px;
+                        text-align: right;
+                        left: -168px;
+
+                        
+                        @include tablet{
+                            top: 50px;
+                            left: -115px;
+                        }
+                        
+                        @include mobile {
+                            left: unset;
+                            top: unset;
+                            text-align: start;
+                        }
+                        &::before {
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include tablet{
+                                top: 100px;
+                                right: -59px;
+                            }
+
+                            right: -119px;
+                        }
+
+                        &::after {
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include tablet{
+                                width: 50px;
+                                top: 102px;
+                                right: -57px;
+                            }
+
+                            width: 107px;
+                            right: -117px;
+
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        top: 231px;
+                        right: -10px;
+                        text-align: left;
+
+                        
+                        @include tablet{
+                            top: 50px;
+                            right: -115px;
+                        }
+                        @include mobile {
+                            right: unset;
+                            top: unset;
+                            text-align: start;
+                        }
+                        &::before {
+                            @include mobile {
+                                display: none;
+                            }
+                            @include tablet{
+                                top: 100px;
+                                left: -59px;
+                            }
+
+                            left: -112px;
+                        }
+
+                        &::after {
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include tablet{
+                                width: 50px;
+                                top: 102px;
+                                left: -57px;
+                            }
+
+                            width: 96px;
+                            left: -110px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 408px;
+                        left: -10px;
+                        text-align: right;
+
+
+
+                        
+                        @include tablet{
+                            bottom: 190px;
+                            left: -115px;
+                        }
+                        @include mobile {
+                            left: unset;
+                            bottom: unset;
+                            text-align: start;
+                        }
+
+                        &::before {
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include tablet{
+                                right: -59px;
+                            }
+
+                            right: -169px;
+                        }
+
+                        &::after {
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include tablet{
+                                width: 50px;
+                                right: -57px;
+                            }
+
+                            width: 157px;
+                            right: -167px;
+                        }
+                    }
+
+                    &:last-child {
+                        bottom: 437px;
+                        right: -10px;
+                        text-align: left;
+
+                        
+                        @include tablet{
+                            bottom: 190px;
+                            right: -115px;
+                        }
+                        
+                        @include mobile {
+                            right: unset;
+                            bottom: unset;
+                            text-align: start;
+                        }
+                        &::before {
+                            @include mobile {
+                                display: none;
+                            }
+                            @include tablet{
+                                right: -59px;
+                            }
+                            left: -138px;
+                        }
+
+                        &::after {
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include tablet{
+                                width: 50px;
+                                left: -57px;
+                            }
+
+
+                            width: 127px;
+                            left: -136px
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        border-top: 1px dashed rgb(60, 60, 82);
+                        transform: rotate(180deg);
+                        position: absolute;
+                        height: 1px;
+                        z-index: 1;
+                        top: 14px;
+                    }
+
+                    &::before {
+                        content: "";
+                        transform: rotate(180deg);
+                        position: absolute;
+                        height: 5px;
+                        width: 5px;
+                        background: rgb(60, 60, 82);
+                        z-index: 1;
+                        top: 12px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        .imageMoon_rektIcon {
+            margin-top: -84px !important;
+            margin: auto;
+            @include mobile{
+                margin-top: 0 !important;
+            }
+            .imageMoon_rektIconInner {
+                text-align: center;
+
+                &:last-child {
+                    margin-left: 80px;
+                }
+            }
+
+            @include flex(center, center);
+
+            .imageMoon_double {
+                @include flex(center, center);
+            }
+
+            .imageMoon_rektIcon_item {
+                margin-top: 16px;
+                @include tablet{
+                    img{
+                        width: 44px;
+                        height: 44px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            span {
+                text-align: center;
+                font-size: 16px;
+                line-height: 28px;
+                text-align: center;
+                color: rgb(20, 28, 41);
+                @include mobile{
+                    font-size: 10px;
+                    line-height: 17px;
+                }
+            }
+
+        }
+    }
+}

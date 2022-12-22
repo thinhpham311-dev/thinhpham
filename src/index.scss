@@ -1,0 +1,59 @@
+@use "./scss/" as *;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./../public/fonts//HelveticaNeueLt.ttf');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./../public/fonts/HelveticaNeueMed.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./../public/fonts/HelveticaNeueBd.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  line-height: 1;
+  font-family: 'Helvetica Neue',sans-serif;
+  color: #F1F1F1;
+}
+
+.Root{
+  position: relative;
+}
+
+.container{
+  max-width: 1440px !important;
+  width: 100% !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  box-sizing: border-box !important;
+ @include mobile {
+  padding-left: 43px !important;
+  padding-right: 43px !important;
+ }
+}
+
+.wrapper{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}

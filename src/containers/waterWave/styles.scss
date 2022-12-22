@@ -1,0 +1,147 @@
+@use "../../scss/" as *;
+
+.waterWave_wrapper {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: -234px;
+
+    @include mobile {
+        margin-top: -106px;
+        height: 1064px;
+    }
+
+    .waterWave_bg {
+       
+        @include tablet{
+            position: unset;
+        }
+
+        img {
+            @include mobile {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .waterWave_container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: border-box;
+
+     
+        @include tablet{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transform: unset;
+        }
+
+        .waterWave_inner {
+            display: flex;
+
+            @include tablet {
+                flex-direction: column;
+                padding-top: 280px;
+            }
+
+            @include mobile {
+                padding-top: 144px;
+            }
+
+            .waterWave_content {
+                flex: 0 0 50%;
+                max-width: 50%;
+
+                @include tablet{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+
+                .HeadingPrimary {
+                    font-size: 82px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    display: inline-flex;
+                    color: rgb(241, 241, 241);
+                    font-weight: 300;
+
+                    @include mobile {
+                        font-size: 36px;
+                    }
+                }
+
+                .waterWave_descriptions {
+                    font-weight: 300;
+                    color: rgb(150, 150, 150);
+                    font-size: 24px;
+                    line-height: 125%;
+                    max-width: 575px;
+                    width: 100%;
+                    padding-top: 72px;
+
+                    @include tablet {
+                        max-width: 100%;
+                    }
+
+                    @include mobile {
+                        font-size: 14px;
+                        padding-top: 24px;
+                    }
+
+                    p {
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .waterWave_btn {
+                    padding-top: 51px;
+
+
+                    a {
+                        font-size: 36px;
+                        line-height: 42px;
+                        display: inline-flex;
+                        color: rgb(0, 255, 0);
+                        font-weight: bold;
+
+                        @include mobile {
+                            font-size: 24px;
+                            line-height: 29px;
+                        }
+                    }
+                }
+            }
+
+            .waterWave_image {
+                flex: 0 0 50%;
+                max-width: 50%;
+                @include flex(center, center);
+                -webkit-box-align: center;
+                -webkit-box-pack: center;
+
+                @include tablet{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding-top: 148px;
+                }
+
+                img {
+                    max-width: 431px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

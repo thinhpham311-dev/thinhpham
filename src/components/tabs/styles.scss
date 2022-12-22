@@ -1,0 +1,51 @@
+@use "../../scss/" as *;
+
+.accordion {
+    padding-top: 32px;
+
+    .accordion-item {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-top: 1px solid rgb(150, 150, 150) !important;
+        border-radius: 0px;
+        overflow: hidden;
+    
+        .accordion-header {
+            .accordion-button {
+                padding: 16px 0;
+                color: rgb(150, 150, 150);
+                transition: all 0.3s ease 0s;
+                font-weight: 300;
+                position: relative;
+                font-size: 24px;
+                line-height: 100%;
+                margin-bottom: 0px;
+                background: none !important;
+                @include mobile{
+                    font-size: 16px;
+                }
+                &:not(.collapsed){
+                    box-shadow: none !important;
+                }
+                &::after{
+                    content: '';
+                    background-image: url('./../../../public/img/down-arrow-alt-regular-24.png');
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        .accordion-body{
+            flex: 1 1 auto;
+            min-height: 1px;
+            padding: 0px 0px 40px;
+            font-size: 18px;
+            line-height: 125%;
+            color: rgb(241, 241, 241);
+            font-weight: 300;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}

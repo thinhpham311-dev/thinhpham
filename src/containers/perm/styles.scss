@@ -1,0 +1,39 @@
+@use "../../scss/" as *;
+
+.imagePerm_wrapper {
+    position: relative;
+    z-index: 1;
+    padding-top: 472px;
+    background-color: rgba(0, 0, 0, 0);
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    max-width: 100%;
+    overflow: hidden;
+
+    @include mobile {
+        padding-top: 144px;
+    }
+
+    .imagePerm_content {
+        img {
+            width: 100%
+        }
+    }
+
+    .imagePerm_contentBtn {
+        padding-top: 180px;
+        font-size: 36px;
+        line-height: 42px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        color: rgb(0, 255, 0);
+        font-weight: bold;
+
+        @include mobile {
+            padding-top: 100px;
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+}

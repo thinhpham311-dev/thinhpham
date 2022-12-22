@@ -1,0 +1,100 @@
+@use "../../scss/" as *;
+
+.header_wrap {
+    --tw-bg-opacity: 1;
+    background-color: rgba(15, 23, 36, var(--tw-bg-opacity));
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 9;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: max-content;
+
+    @include mobile {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header_contain {
+        p, ul{
+            margin-bottom: 0;
+        }
+        @include flex(center, space-between);
+
+        @include mobile {
+            @include flex(center, end);
+        }
+
+        .header_icon {
+            img {
+                image-rendering: -webkit-optimize-contrast;
+                transform: translateZ(0px);
+                filter: blur(0px);
+                height: 40px;
+            }
+
+        }
+
+        .header_links {
+            list-style: none;
+            @include flex(center, space-between);
+
+            @include mobile {
+                margin-left: 20px;
+            }
+
+            a {
+                position: relative;
+                margin-left: 50px;
+                font-weight: 700;
+                display: inline-flex;
+                text-decoration: none;
+                color: $green;
+                font-size: 21.3333px;
+                line-height: 25px;
+                -webkit-box-align: center;
+                align-items: center;
+
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 14px;
+                    margin-left: 12px;
+                }
+
+                span {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -3px;
+                        left: 0px;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $green;
+
+                        @include mobile {
+                            height: 1px
+                        }
+                    }
+                }
+            }
+
+            .header_linkItem:nth-child(1) {
+                a {
+                    color: $white;
+                    position: relative;
+
+                    span {
+                        position: relative;
+
+                        &::after {
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

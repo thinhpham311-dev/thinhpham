@@ -1,0 +1,22 @@
+@use "../../scss/" as *;
+.faq_WrapperPerm {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    max-width: 100%;
+    overflow: hidden;
+
+    .HeadingPrimary {
+        font-size: 82px;
+        line-height: 100%;
+        text-transform: uppercase;
+        display: inline-flex;
+        color: rgb(241, 241, 241);
+        font-weight: 300;
+        @include mobile{
+            font-size: 36px;
+        }
+    }
+}
